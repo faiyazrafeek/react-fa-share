@@ -1,6 +1,6 @@
 import React from 'react'
 import './texts.css'
-import { Clipboard } from 'react-feather';
+// import { Clipboard } from 'react-feather';
 
 
 function Texts(message) {
