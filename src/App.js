@@ -8,8 +8,6 @@ import { v4 as uuidv4 } from 'uuid';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
-const MySwal = withReactContent(Swal)
-
 function App() {
 
   var [messageObject, setMessageObject] = useState({})

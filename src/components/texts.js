@@ -5,13 +5,10 @@ import copy from "copy-to-clipboard";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
-const MySwal = withReactContent(Swal)
-
-
 function Texts(props) { 
     const len = Object.keys(props.messageObject).map(id => id)
 
-    if (len == 0) {                
+    if (len === 0) {                
         return <h4>No Data yet...</h4>        
     }
 
