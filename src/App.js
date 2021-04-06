@@ -5,6 +5,10 @@ import Navbar from './components/navbar';
 import Texts from './components/texts';
 import firebaseDb from './firebase';
 import { v4 as uuidv4 } from 'uuid';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
 
 function App() {
 
@@ -34,6 +38,26 @@ function App() {
     });
   } 
 
+  const del = id => {
+    Swal.fire({
+      title: 'Are you sure?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        firebaseDb.child(`messages/${id}`).remove()
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })
+  }
+
   return (
     <>
       <Navbar/>
@@ -41,7 +65,7 @@ function App() {
       <div className="container mt-4">
         <AddText {...({add})} />
         <div className="my-5"></div>
-        <Texts message={messageObject} />
+        <Texts  {...({messageObject, del})} />
       </div>
     </>
   );

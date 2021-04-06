@@ -23,15 +23,21 @@ function AddText(props) {
 
 
     const postText = (e) => {
-        text.message === '' ? 
-        MySwal.fire({ 
-            title: 'Empty Field!',
-            icon: 'warning',
-            confirmButtonText: 'Ok'
-        }) 
-        : 
-        props.add(text)
-        setText(initValue);      
+        if(text.message === '') {
+            MySwal.fire({ 
+                title: 'Empty Field!',
+                icon: 'warning',
+                confirmButtonText: 'Ok'
+            }) 
+        }else{
+            props.add(text)
+            setText(initValue);  
+            MySwal.fire({ 
+                title: 'Added!',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+            })
+        }         
     }  
 
     return (

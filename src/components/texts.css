@@ -1,10 +1,11 @@
-.card-container .card {
-  flex-direction: row-reverse;
-  height: auto;
+.msg-item {
+  border: 1px solid #666;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.card button {
-  height: 100%;
+.del button {
   border: none;
   background: none;
 }
