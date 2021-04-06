@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 function App() {
 
   var [messageObject, setMessageObject] = useState({})
-  var [currentId, setcurrentId] = useState('')
+  // var [currentId, setcurrentId] = useState('')
 
   useEffect(() => {
     firebaseDb.child('messages').orderByKey().on('value', snapshop => {
