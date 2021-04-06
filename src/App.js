@@ -6,7 +6,6 @@ import Texts from './components/texts';
 import firebaseDb from './firebase';
 import { v4 as uuidv4 } from 'uuid';
 import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
 
 function App() {
 

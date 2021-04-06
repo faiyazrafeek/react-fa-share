@@ -3,7 +3,6 @@ import './texts.css'
 import { Trash, Copy } from 'react-feather';
 import copy from "copy-to-clipboard"; 
 import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
 
 function Texts(props) { 
     const len = Object.keys(props.messageObject).map(id => id)
