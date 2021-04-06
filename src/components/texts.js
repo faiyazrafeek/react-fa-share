@@ -16,7 +16,7 @@ function Texts(message) {
                 {
                     return(             
                         <div key={id} className="card mb-3">                               
-                            <div> <button onClick={copyToClipboard}><Clipboard/></button> </div>
+                            <div> <button><Clipboard/></button> </div>
                             <div className="card-body"> { msg.message } </div>
                         </div>
                     )

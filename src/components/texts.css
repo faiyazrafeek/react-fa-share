@@ -1,0 +1,9 @@
+.card-container .card {
+  flex-direction: row-reverse;
+}
+
+.card button {
+  height: 100%;
+  border: none;
+  background: none;
+}
