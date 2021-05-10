@@ -8,7 +8,6 @@ import { v4 as uuidv4 } from 'uuid';
 import Swal from 'sweetalert2'
 
 function App() {
-
   var [messageObject, setMessageObject] = useState({})
   // var [currentId, setcurrentId] = useState('')
 
@@ -16,8 +15,7 @@ function App() {
     firebaseDb.child('messages').orderByKey().on('value', snapshop => {
         if(snapshop.val()!= null)
         setMessageObject({
-            ...snapshop.val()
-          
+            ...snapshop.val()          
         })
         else
         setMessageObject({})
@@ -28,7 +26,6 @@ function App() {
 
   const add = obj => {
     // firebaseDb.child('messages').push(obj)
-
     firebaseDb.child('messages/' + uuidv4()).set({      
       date: obj.date,
       message: obj.message

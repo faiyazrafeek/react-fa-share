@@ -35,7 +35,7 @@ function Texts(props) {
                 {
                     return(             
                         <div key={id} className="msg-item mb-2 py-3 px-2">                              
-                            <div>{ props.messageObject[id].message } </div>
+                            <div className="text-main">{ props.messageObject[id].message } </div>
                             <div className="del">
                                 <button onClick={() => {del(id)}}><Trash/></button>
                                 <button onClick={() => {copytext(props.messageObject[id].message)}}><Copy/></button>                            
