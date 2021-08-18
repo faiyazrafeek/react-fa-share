@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# FA Share
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Simple application to keep notes. 
 
 ## Available Scripts
 
